@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<ForceField>
+  <Info>
+    <DateGenerated>2023-06-30</DateGenerated>
+  </Info>
+  <AtomTypes>
+    <Type name="SPCE-OH2" class="OT" mass="15.9994" element="O"/>
+    <Type name="SPCE-H1" class="HT" mass="1.008" element="H"/>
+    <Type name="SPCE-H2" class="HT" mass="1.008" element="H"/>
+  </AtomTypes>
+  <Residues>
+    <Residue name="SPCE">
+      <Atom name="OH2" type="SPCE-OH2" charge="-0.848"/>
+      <Atom name="H1" type="SPCE-H1" charge="0.424"/>
+      <Atom name="H2" type="SPCE-H2" charge="0.424"/>
+      <Bond atomName1="OH2" atomName2="H1"/>
+      <Bond atomName1="OH2" atomName2="H2"/>
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond class1="HT" class2="HT" length="0.1632980862" k="0.0"/>
+    <Bond class1="HT" class2="OT" length="0.1" k="376559.99999999994"/>
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle class1="HT" class2="OT" class3="HT" angle="1.9105543362928767" k="460.24"/>
+  </HarmonicAngleForce>
+  <!--Urey-Bradley terms-->
+  <AmoebaUreyBradleyForce/>
+  <NonbondedForce coulomb14scale="1.0" lj14scale="1.0">
+    <UseAttributeFromResidue name="charge"/>
+    <Atom class="HT" sigma="1.0" epsilon="0.0"/>
+    <Atom class="OT" sigma="1.0" epsilon="0.0"/>
+  </NonbondedForce>
+  <LennardJonesForce lj14scale="1.0">
+    <Atom class="HT" sigma="1.0" epsilon="0.0"/>
+    <Atom class="OT" sigma="0.3166254044270766" epsilon="0.6363864000000001"/>
+  </LennardJonesForce>
+</ForceField>
